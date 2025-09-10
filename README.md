@@ -267,21 +267,6 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 - **[APRS-IS](http://www.aprs-is.net/)** - Internet backbone of the APRS network
 - **Amateur Radio Community** - For developing and maintaining APRS
 
-## 📞 Support
-
-- **Issues**: [GitHub Issues](https://github.com/YOUR_USERNAME/simple-aprs-igate/issues)
-- **Documentation**: [Project Wiki](https://github.com/YOUR_USERNAME/simple-aprs-igate/wiki)
-- **APRS Community**: [APRS.org](http://www.aprs.org/)
-
-## 📈 Project Status
-
-- ✅ Core functionality complete
-- ✅ Docker containerization
-- ✅ Management scripts
-- ✅ Documentation
-- 🔄 Solar power guide (planned)
-- 🔄 Multi-architecture builds (planned)
-
 ---
 
 **73 & Happy DXing!** 📻
