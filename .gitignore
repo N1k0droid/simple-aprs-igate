@@ -1,0 +1,27 @@
+# Environment variables
+.env
+
+# Logs
+logs/
+*.log
+
+# Docker
+.dockerignore
+
+# IDE files
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Temporary files
+*.tmp
+*~
+
+# Build artifacts
+build/
+dist/
