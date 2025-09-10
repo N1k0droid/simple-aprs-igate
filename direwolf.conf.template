@@ -1,0 +1,27 @@
+# APRS iGate Configuration Template
+MYCALL ${APRS_CALLSIGN}
+ADEVICE stdin null
+ACHANNELS 1
+
+CHANNEL 0
+MODEM 1200
+
+# APRS-IS server configuration
+IGSERVER ${APRS_SERVER} ${APRS_PORT}
+IGLOGIN ${APRS_CALLSIGN} ${APRS_PASSCODE}
+
+# Position beacon via Internet only (shows iGate location on aprs.fi)
+PBEACON sendto=IG delay=0:30 every=30:00 symbol="igate" overlay=R lat=${LATITUDE} long=${LONGITUDE} comment="${LOCATION_COMMENT} Coverage ${FILTER_RADIUS}km"
+
+# Forward received packets from radio to Internet
+IGTXVIA 0,WIDE1-1,WIDE2-1
+
+# Geographic filter
+FILTER IG 0 r/${LATITUDE}/${LONGITUDE}/${FILTER_RADIUS}
+
+# TCP server for monitoring
+AGWPORT 8000
+
+# Logging
+LOGDIR /logs
+LOGFILE /logs/igate.log
