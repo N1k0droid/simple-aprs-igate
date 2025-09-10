@@ -1,0 +1,21 @@
+services:
+  aprs-igate:
+    build: .
+    container_name: aprs-igate
+    privileged: true
+    devices:
+      - "/dev/bus/usb:/dev/bus/usb"
+      - "/dev/rtl_sdr:/dev/rtl_sdr"
+    volumes:
+      - ./config:/config
+      - ./logs:/logs
+      - ./scripts:/scripts
+    env_file:
+      - .env
+    environment:
+      - PYTHONUNBUFFERED=1
+    ports:
+      - "8000:8000"
+    restart: unless-stopped
+    network_mode: host
+    command: ["/scripts/startup.sh"]
